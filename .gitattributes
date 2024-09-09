@@ -1,0 +1,5 @@
+# Ensure text files use LF
+* text=auto
+
+# Ensure specific file types use LF
+*.json text eol=lf
