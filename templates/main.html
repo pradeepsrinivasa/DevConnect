@@ -1,0 +1,50 @@
+{% include 'nav.html' %}
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+  
+  <!-- Icon - IconMonster (Use HTTP for now if HTTPS fails) -->
+  <link rel="stylesheet" href="{% static 'styles/iconmonstr-iconic-font.min.css' %}" />  
+  
+  <!-- Mumble UI -->
+  <link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" />
+  
+  <!-- Dev Search UI -->
+  <link rel="stylesheet" href="{% static 'styles/app.css' %}" />
+  
+  <!-- Dev Search Icons -->
+  <link rel="stylesheet" href="{% static 'styles/iconmonstr-iconic-font.css' %}" />  
+  <!-- Scripts -->
+  <script src="{% static 'js/highlight.min.js' %}"></script>
+  
+  <title>DevSearch - Connect with Developers!</title>
+  <script src='{% static "uikit/app.js" %}'>// Invoke Functions Call on Document Loaded
+    
+    </script>
+</head>
+<body>
+  
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert--{{ message.tags }}">
+        <p class="alert__message">{{ message }}</p>
+        <button class="alert__close" onclick="Function()">x</button>
+      </div>
+    {% endfor %}
+  {% endif %}
+  
+  {% block content %}
+  {% endblock %}
+  
+  <!-- External Script -->
+  
+</body>  
+</html>
