@@ -18,9 +18,9 @@ import os
 from django.conf import settings
 import environ
 
+CORS_ALLOW_ALL_ORIGINS = True
 
-
-CSRF_TRUSTED_ORIGINS =['devconnect-pcus.onrender.com',
+CSRF_TRUSTED_ORIGINS =['https://devconnect-pcus.onrender.com',
 ]
 
 
