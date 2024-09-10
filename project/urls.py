@@ -12,6 +12,8 @@ urlpatterns = [
     path('delete_project/<str:pk>',views.deleteProject,name='deleteproject'),
     path('create_project',views.CreateProject,name='createproject'),
     path('update_project/<str:pk>',views.UpdateProject,name='updateproject'),
+    path('health/', health_check, name='health_check'),
+
 
 
 
