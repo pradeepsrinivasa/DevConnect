@@ -20,8 +20,7 @@ import environ
 
 
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://devconnect-pcus.onrender.com',
+CSRF_TRUSTED_ORIGINS =['devconnect-pcus.onrender.com',
 ]
 
 
