@@ -23,4 +23,7 @@ urllib3==2.2.2
 whitenoise==6.7.0
 waitress==3.0.0
 python-decouple==3.8
-dotenv
+pip install --upgrade pip setuptools wheel
+pip cache purge
+pip install python-dotenv
+
