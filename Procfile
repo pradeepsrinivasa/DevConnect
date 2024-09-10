@@ -1,1 +1,1 @@
-web: gunicorn firstapp.wsgi:application
+web: python -m waitress --port=8000 firstapp.wsgi:application
