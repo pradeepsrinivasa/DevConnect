@@ -1,1 +1,1 @@
-web: gunicorn https://devconnect-pcus.onrender.com.wsgi --log-file -
+web: gunicorn firstapp.wsgi --log-file -
