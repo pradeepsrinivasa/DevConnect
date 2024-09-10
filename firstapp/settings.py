@@ -42,9 +42,19 @@ ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=[])
 
 # Application definition
 
+from decouple import config
+
 DATABASES = {
-    'default': env.db(),  # Reads the DATABASE_URL environment variable
+    'default': {
+        'ENGINE': config('DB_ENGINE'),
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
+    }
 }
+
 
 
 
@@ -273,7 +283,7 @@ DEFAULT_FILE_STORAGE = "storages.backends.s3.S3Storage"
 
 
 
-EDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/media/'
+MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/media/'
 
 
 
