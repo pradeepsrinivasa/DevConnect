@@ -98,6 +98,12 @@ def UpdateProject(request,pk):
                      return redirect('account')
        context={'form':form,'project':project}
        return render(request,'project/project_form.html',context)
+
+
+from django.http import HttpResponse
+
+def health_check(request):
+    return HttpResponse("OK", content_type="text/plain")
        
        
 
