@@ -2,9 +2,7 @@ from pathlib import Path
 import environ
 
 # Initialize environment variables
-env = environ.Env(
-    DEBUG=(bool, False),
-)
+env = environ.Env()
 
 # Read .env file
 environ.Env.read_env()
