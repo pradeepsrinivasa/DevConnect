@@ -45,7 +45,7 @@
                     Feedback ({{pr.vote_total}} Vote{{pr.vote_total|pluralize:'s'}})
                   </p>
                     
-                      {% for tag in pr.tag.all%}
+                      {% for tag in pr.tag.all|slice:':5'%}
                           <div class="project__tags" style="display: inline-flex;padding-bottom: 5px;">
                              <span class='tag tag--pill tag--main'>
                                 <p>{{tag}}</p>
