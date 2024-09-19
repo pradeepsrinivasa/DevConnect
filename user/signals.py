@@ -15,8 +15,8 @@ def createdprofile(sender,instance,created,**kwargs):
             name=user.first_name
         )
         
-        subject='Welcome to Developers Connect'
-        message='We are glad to join with us'
+        subject = "Welcome to Dev Connect!"
+    message = f"Hi {user.username},\n\nWelcome to Dev Connect! We are excited to have you join our developer community. Start exploring and connecting with other developers.\n\nBest Regards,\nDev Connect Team"
         send_mail(
             subject,
             message,
